@@ -1,0 +1,80 @@
+/Membuat daftar menu dan penjualan dalam sebuah toko/
+#include <iostream>
+
+int main() {
+    int pilihan, jumlah;
+    double total = 0;
+    char ulang;
+    
+    do {
+        // Menampilkan menu
+        printf("\n\t -----------------------");
+        printf("\n\t  MENU PILIHAN");
+        printf("\n\t ----------------------- ");
+        printf("\n\t [1] Nasi Putih  - Rp 5.000");
+        printf("\n\t [2] Ayam Goreng - Rp 12.000");
+        printf("\n\t [3] Bebek Goreng - Rp 20.000");
+        printf("\n\t [4] Lele - Rp 10.000");
+        printf("\n\t [5] Es Teh - Rp 3.000");
+        printf("\n\t [6] Es Jeruk - Rp 4.000");
+        printf("\n\t -----------------------");
+        
+        // Meminta pengguna memasukkan pilihan
+        printf("\n\n\t Memu pilihan");
+        printf("\n\t by Arvin XI-3");
+        printf("\n\n\t Silahkan masukkan Pilihan anda: ");
+        scanf("%i", &pilihan);
+        
+        // Meminta jumlah pesanan
+        printf("\n\t Masukkan jumlah pesanan: ");
+        scanf("%i", &jumlah);
+        
+        // Proses pilihan dan hitung total harga
+        switch(pilihan) {
+            case 1:
+                printf("\nAnda memilih Nasi Putih\n");
+                total += 5000 * jumlah;
+                break;
+            case 2:
+                printf("\nAnda memilih Ayam Goreng\n");
+                total += 12000 * jumlah;
+                break;
+            case 3:
+                printf("\nAnda memilih Bebek Goreng\n");
+                total += 20000 * jumlah;
+                break;
+            case 4:
+                printf("\nAnda memilih Lele\n");
+                total += 10000 * jumlah;
+                break;
+            case 5:
+                printf("\nAnda memilih Es Teh\n");
+                total += 3000 * jumlah;
+                break;
+            case 6:
+                printf("\nAnda memilih Es Jeruk\n");
+                total += 4000 * jumlah;
+                break;
+            default:
+                printf("\nPilihan anda salah, coba pilih lagi\n");
+                continue;
+        }
+        
+        // Menampilkan total sementara
+        printf("\nTotal sementara: Rp %.2f\n", total);
+        
+        // Meminta pengguna untuk memilih apakah akan melanjutkan atau tidak
+        printf("\nIngin memilih menu lain (yes/no)? ");
+        scanf(" %c", &ulang);
+        printf("\n");
+        
+    } while (ulang != 'n' && ulang != 'N'); // Keluar dari loop jika pengguna memilih 'no' atau 'n'
+    
+    printf("\n-----------------------");
+    printf("\nTotal pembayaran: Rp %.2f\n", total);
+    printf("\n-----------------------");
+    
+    printf("\nTerimakasih Telah menggunakan program saya \n ~Arvin XI-3\n");
+
+    return 0;
+}
